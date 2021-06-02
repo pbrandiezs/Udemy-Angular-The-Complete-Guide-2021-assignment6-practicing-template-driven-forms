@@ -9,14 +9,27 @@ import { NgForm } from '@angular/forms';
 export class AppComponent {
   @ViewChild('f') signupForm: NgForm;
   subscriptionOption: string = "Advanced";
+  submitted = false;
+  formValues = {
+    email: '',
+    subscription: '',
+    password: ''
+  };
 
 // suggestSubscription() {
 //   this.signupForm.form.patchValue(this.subscriptionOption: pro)
 // }
 
   onSubmit() {
-    console.log("Form Submitted!");
-    console.log(this.signupForm);
+    // console.log("Form Submitted!");
+    // console.log(this.signupForm);
+    this.submitted = true;
+    console.log("Email: " + this.signupForm.value.email);
+    console.log("Subscription: " + this.signupForm.value.subscription);
+    console.log("Password: " + this.signupForm.value.password);
+    this.formValues.email = this.signupForm.value.email;
+    this.formValues.subscription = this.signupForm.value.subscription;
+    this.formValues.password = this.signupForm.value.password;
   }
 
   // onInit() {
