@@ -8,10 +8,19 @@ import { NgForm } from '@angular/forms';
 })
 export class AppComponent {
   @ViewChild('f') signupForm: NgForm;
+  subscriptionOption: string = "Advanced";
+
+// suggestSubscription() {
+//   this.signupForm.form.patchValue(this.subscriptionOption: pro)
+// }
 
   onSubmit() {
     console.log("Form Submitted!");
     console.log(this.signupForm);
   }
+
+  // onInit() {
+  //   this.suggestSubscription();
+  // }
 
 }
