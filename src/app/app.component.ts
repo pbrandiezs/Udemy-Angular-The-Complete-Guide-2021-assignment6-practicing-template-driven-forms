@@ -16,12 +16,7 @@ export class AppComponent {
     password: ''
   };
 
-// suggestSubscription() {
-//   this.signupForm.form.patchValue(this.subscriptionOption: pro)
-// }
-
   onSubmit() {
-    // console.log("Form Submitted!");
     // console.log(this.signupForm);
     this.submitted = true;
     console.log("Email: " + this.signupForm.value.email);
@@ -30,10 +25,7 @@ export class AppComponent {
     this.formValues.email = this.signupForm.value.email;
     this.formValues.subscription = this.signupForm.value.subscription;
     this.formValues.password = this.signupForm.value.password;
+
+    this.signupForm.reset();
   }
-
-  // onInit() {
-  //   this.suggestSubscription();
-  // }
-
 }
